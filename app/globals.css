@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-900 text-haze-100 antialiased;
+  background-image: radial-gradient(circle at top right, rgba(105, 247, 196, 0.08), transparent 50%),
+    radial-gradient(circle at 10% 20%, rgba(255, 138, 101, 0.08), transparent 45%);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(105, 247, 196, 0.25);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+}
+
+.card-surface {
+  @apply rounded-2xl border border-white/10 bg-ink-800/80 shadow-soft backdrop-blur;
+}
+
+.primary-button {
+  @apply inline-flex items-center justify-center rounded-full bg-accent-500 px-6 py-3 font-semibold text-ink-900 shadow-glow transition hover:bg-accent-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500;
+}
+
+.secondary-button {
+  @apply inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold text-haze-100 transition hover:border-accent-500 hover:text-accent-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500;
+}
+
+.grid-overlay {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.fade-bottom {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
