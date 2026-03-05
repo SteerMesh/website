@@ -1,0 +1,22 @@
+.PHONY: install dev build lint format emulators clean
+
+install:
+	npm install
+
+dev:
+	npm run dev
+
+build:
+	npm run build
+
+lint:
+	npm run lint
+
+format:
+	npm run format
+
+emulators:
+	npm run emulators
+
+clean:
+	rm -rf .next out
